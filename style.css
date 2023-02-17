@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,200;0,500;1,100;1,800&family=Inter:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(0, 0%, 98%);
+    font-family: 'Epilogue';
+    font-size: 18px;
+}
+
+nav {
+    width: 100%;
+    /* background: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 30px;
+}
+
+nav .menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav .logo {
+    margin-right: 20px;
+    display: flex;
+    margin-top: 5px;
+}
+
+.menu-btn {
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* NAVBAR LEFT */
+
+.leftnav {
+    width: 50%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    list-style: none;
+}
+
+ul li {
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+}
+
+ul li:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+details summary i {
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+details i {
+    margin-right: 10px;
+}
+
+details span {
+    position: absolute;
+    top: 10%;
+    border-radius: 20px;
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 10px hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 8%);
+}
+
+details summary::marker {
+    content: '';
+}
+
+details[open] h4 {
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+
+/* NAVBAR RIGHT */
+.rightnav {
+    width: 50%;
+    text-align: end;
+}
+
+.rightnav button {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+}
+
+.rightnav span {
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+.rightnav button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.rightnav button:hover {
+    color: #fff;
+}
+
+.rightnav button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+/* SECTION  */
+
+
+section {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* LEFT  */
+section .left {
+    padding: 50px;
+    width: 50%;
+    margin-top: 100px;
+}
+
+section .left h3 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #0b0909;
+}
+
+section .left p {
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 41%);
+    margin-bottom: 40px;
+}
+
+section .left button {
+    font-family: 'Epilogue';
+    font-size: 1rem;
+    cursor: pointer;
+    align-items: center;
+    height: 48px;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    padding: 0 1.2rem;
+    color: #fff;
+    border: none;
+    box-shadow: 0 .5rem 1rem rgba(143, 142, 142, 0.15) !important;
+    background: #000000;
+}
+
+section .left button .followers {
+    font-size: 1.1rem;
+    color: white;
+    left: 10px;
+    position: relative;
+}
+
+section .left button:hover {
+    background: none;
+    color: hsl(0, 0%, 8%);
+    border: 2px solid;
+}
+
+section .left button:hover .followers {
+    color: hsl(0, 0%, 8%);
+}
+
+
+/* RIGHT */
+section .right {
+    background-image: url(images/image-hero-desktop.png);
+    background-size: cover;
+    width: 50%;
+    height: 100vh;
+    border-radius: 10px;
+}
+
+/* BOTTOM */
+section .icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+
+
+
+@media (max-width:305px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    section {
+        width: 100%;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 2px;
+        position: relative;
+        z-index: -9;
+    }
+
+    nav {
+        position: fixed;
+        background: hsl(0, 0%, 98%);
+    }
+
+    nav .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        background: hsl(0, 0%, 98%);
+        padding-top: 0%;
+        top: 80px;
+        left: 50%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        transition: 2s all ease;
+    }
+
+    nav .menu.active {
+        display: flex;
+        left: 30%;
+        padding: 70px 10px;
+        width: 83%;
+        z-index: 999;
+    }
+
+    nav .leftnav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+
+    nav .leftnav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 25px;
+    }
+
+    nav .leftnav ul li {
+        padding: 20px 50px;
+    }
+
+    nav .rightnav {
+        text-align: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    nav .rightnav button {
+        margin: 30px;
+    }
+
+    details span {
+        position: relative;
+        top: 0%;
+        border-radius: 0px;
+        background: transparent;
+        padding: 0px;
+        margin-top: 0px;
+        box-shadow: 0px 0px 0px hsl(0, 0%, 8%);
+        color: hsl(0, 0%, 8%);
+    }
+
+    details summary::marker {
+        content: '';
+    }
+
+    details[open] h4 {
+        margin-top: 10px;
+        font-weight: 500;
+    }
+
+    section .left {
+        padding: 8px;
+        width: 100%;
+        position: relative;
+        margin-bottom: 40px;
+
+    }
+
+    section .right {
+        width: 100%;
+        background-image: url(images/image-hero-mobile.png
+);
+    }
+
+}
