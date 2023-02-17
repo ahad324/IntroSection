@@ -222,7 +222,7 @@ section .icons {
 
 
 
-@media (max-width:375px) {
+@media (max-width:907px) {
     .menu-btn {
         display: block;
         z-index: 999;
