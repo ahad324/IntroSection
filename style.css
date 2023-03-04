@@ -209,7 +209,7 @@ section .left button:hover .followers {
 
 /* RIGHT */
 section .right {
-    background-image: url("image-hero-desktop.png");
+    background-image: url(image-hero-desktop.png);
     background-size: cover;
     width: 50%;
     height: 100vh;
