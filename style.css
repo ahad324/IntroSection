@@ -92,6 +92,11 @@ details[open] h4 {
     font-weight: 500;
 }
 
+details span h4:hover {
+    cursor: pointer;
+    color: red;
+}
+
 
 /* NAVBAR RIGHT */
 .rightnav {
