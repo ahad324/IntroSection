@@ -328,7 +328,7 @@ section .icons {
 
     section .right {
         width: 100%;
-        background-image: url(images/image-hero-mobile.png
+        background-image: url(image-hero-mobile.png);
 );
     }
 
