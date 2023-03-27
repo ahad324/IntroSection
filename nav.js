@@ -12,9 +12,9 @@ $('.menu-btn').click(function () {
     $('nav').toggleClass("active");
     $('section').toggleClass('active')
 })
-$('.deta1 summary i').click(function () {
+$('.deta1 summary').click(function () {
     $('.deta1 summary i').toggleClass("fa-angle-up");
 })
-$('.deta2 summary i').click(function () {
+$('.deta2 summary').click(function () {
     $('.deta2 summary i').toggleClass("fa-angle-up");
 })
