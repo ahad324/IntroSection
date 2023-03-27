@@ -10,10 +10,11 @@ $('.menu-btn').click(function () {
     $('.menu-btn i').toggleClass("active");
     $('.menu-btn i').toggleClass("fa-sharp fa-solid fa-xmark");
     $('nav').toggleClass("active");
+    $('section').toggleClass('active')
 })
-$('.deta1').click(function () {
+$('.deta1 summary i').click(function () {
     $('.deta1 summary i').toggleClass("fa-angle-up");
 })
-$('.deta2').click(function () {
+$('.deta2 summary i').click(function () {
     $('.deta2 summary i').toggleClass("fa-angle-up");
 })
